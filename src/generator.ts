@@ -26,16 +26,18 @@ export default class Generator {
             datacenterIdBits?: number;
             sequence?: number;
             sequenceBits?: number;
-        } = { epoch: Date.now() },
+        } = {
+            epoch: Date.now(),
+        },
     ) {
         this.config = {
             epoch: this.hydrate(setup.epoch, 1577836800000n),
-            workerId: this.hydrate(setup.workerId, 0n),
-            datacenterId: this.hydrate(setup.datacenterId, 0n),
-            workerIdBits: this.hydrate(setup.workerIdBits, 0n),
-            datacenterIdBits: this.hydrate(setup.datacenterIdBits, 0n),
-            sequence: this.hydrate(setup.sequence, 0n),
-            sequenceBits: this.hydrate(setup.sequenceBits, 0n),
+            workerId: this.hydrate(setup.workerId ?? 0, 0n),
+            datacenterId: this.hydrate(setup.datacenterId ?? 0, 0n),
+            workerIdBits: this.hydrate(setup.workerIdBits ?? 5, 0n),
+            datacenterIdBits: this.hydrate(setup.datacenterIdBits ?? 5, 0n),
+            sequence: this.hydrate(setup.sequence ?? 0, 0n),
+            sequenceBits: this.hydrate(setup.sequenceBits ?? 12, 0n),
         };
         this.sequence = this.config.sequence;
         this.maxWorkerId = -1n ^ (-1n << this.config.workerIdBits);
