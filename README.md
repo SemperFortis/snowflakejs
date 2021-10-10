@@ -1,8 +1,8 @@
 # snowflakejs
 
-SnowflakeJS is a Twitter snowflake generator and deconstructor for JavaScript based on [snowflake-js](https://github.com/luvaeria/snowflake-js).
+SnowflakeJS is a Twitter snowflake generator and deconstructor for JavaScript.
 
-![npm](https://img.shields.io/npm/v/@semperfortis/snowflakejs?style=for-the-badge) ![npm](https://img.shields.io/npm/dt/@semperfortis/snowflakejs?style=for-the-badge) ![CircleCI](https://img.shields.io/circleci/build/github/SemperFortis/erlpackjs?style=for-the-badge&token=0529fcb998f249c725bc399db60846d10ccf5551) ![Maintenance](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/@semperfortis/snowflakejs?style=for-the-badge) ![npm](https://img.shields.io/npm/dt/@semperfortis/snowflakejs?style=for-the-badge) ![CircleCI](https://img.shields.io/circleci/build/github/SemperFortis/snowflakejs?style=for-the-badge&token=0529fcb998f249c725bc399db60846d10ccf5551) ![Maintenance](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
 
 ## Installation
 
