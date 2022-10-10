@@ -58,14 +58,14 @@ export default class Generator {
     private hydrate(value: any, defaultValue: bigint) {
         if (typeof value === 'bigint') {
             return value;
+        } else if (typeof value === 'number') {
+            return BigInt(value);
         } else {
-            if (typeof value === 'number') {
-                return BigInt(value);
-            } else {
-                console.error('setup values must be a number or a bigint');
+            console.error(
+                `Setup values must be a number or a BigInt, defaulting to ${defaultValue}`,
+            );
 
-                return defaultValue;
-            }
+            return defaultValue;
         }
     }
 
@@ -78,6 +78,7 @@ export default class Generator {
                 `Worker ID cannot be greater than ${this.maxWorkerId} or less than 0`,
             );
         }
+        
         if (
             this.config.datacenterId > this.maxDatacenterId ||
             this.config.datacenterId < 0
